@@ -1,0 +1,54 @@
+:root {
+    --bg: #0c0c0c;
+    --fg: #c8c8c8;
+    --muted: #686868;
+    --link: #5f9ea0;
+    --accent: #e8e8e8;
+    --mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    cursor: url('http://9front.org/img/cursor.png'), auto;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--mono);
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.nav {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 12px;
+    line-height: 1;
+    z-index: 10;
+}
+
+.nav a {
+    color: var(--muted);
+}
+
+.nav a:hover {
+    color: var(--fg);
+    text-decoration: none;
+}

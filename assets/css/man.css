@@ -1,0 +1,124 @@
+@import url('base.css');
+
+body {
+    font-size: 16px;
+}
+
+.man-frame {
+    width: 100%;
+    height: calc(100% - 1.5rem);
+    border: none;
+    display: block;
+}
+
+#iamanaws,
+#paranoia:target {
+    display: block;
+}
+
+#paranoia,
+#paranoia:target~#iamanaws,
+.label-paranoia,
+#paranoia:target~#prompt .label-iamanaws {
+    display: none;
+}
+
+#paranoia:target~#prompt .label-paranoia {
+    display: inline;
+}
+
+#prompt {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    font-size: 16px;
+}
+
+#prompt-inner {
+    max-width: 75ch;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+}
+
+#prompt-inner>span {
+    background: var(--fg);
+    color: var(--bg);
+}
+
+#progress {
+    padding-left: 1ch;
+}
+
+#help-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+#help-overlay.visible {
+    display: flex;
+}
+
+#help-box {
+    background: var(--bg);
+    border: 1px solid var(--muted);
+    padding: 1.5rem 2rem;
+    max-width: 40ch;
+    font-size: 14px;
+}
+
+#help-box h2 {
+    margin: 0 0 1rem;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#help-box dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.25rem 1.5rem;
+}
+
+#help-box dt {
+    font-weight: bold;
+}
+
+#help-box dd {
+    margin: 0;
+    color: var(--muted);
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #help-box {
+        margin: 1rem;
+        padding: 1.25rem 1.5rem;
+        max-width: calc(100vw - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    #prompt-inner {
+        padding: 0;
+    }
+}

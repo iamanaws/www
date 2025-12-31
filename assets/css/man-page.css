@@ -1,0 +1,163 @@
+@import url('base.css');
+
+body {
+  max-width: 75ch;
+  margin: auto;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* Header/Footer tables */
+table.head,
+table.foot {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.head {
+  margin-bottom: 0.5lh;
+}
+
+table.foot {
+  margin-top: 1lh;
+}
+
+table.head td,
+table.foot td {
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.head-vol {
+  text-align: center;
+  width: 100%;
+  text-overflow: unset;
+}
+
+.head-ltitle,
+.head-rtitle {
+  background: linear-gradient(currentColor, currentColor) 0 calc(100% - 0.25em) / calc(100% - 3ch) 1px no-repeat;
+}
+
+.foot-date {
+  text-align: left;
+}
+
+.foot-os {
+  text-align: right;
+}
+
+/* Manual content */
+.manual-text {
+  margin-bottom: 1lh;
+}
+
+section.Sh {
+  margin-bottom: 1lh;
+}
+
+h1.Sh,
+h2.Ss {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+h2.Ss {
+  margin-left: 7ch;
+}
+
+p.Pp {
+  margin: 0 0 1lh 7ch;
+}
+
+h2.Ss+p.Pp {
+  margin-left: 10ch;
+}
+
+/* Links */
+a.Lk,
+a.permalink {
+  color: inherit;
+  font-weight: bold;
+}
+
+.Ss a.Lk {
+  font-weight: normal;
+}
+
+a.Lk:hover,
+a.permalink:hover {
+  text-decoration: underline;
+}
+
+/* Inline elements */
+code.Nm {
+  font: bold 1em inherit;
+}
+
+span.Nd,
+span.An {
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .head-rtitle {
+    display: none;
+  }
+
+  .head-ltitle,
+  .head-vol {
+    background: none;
+  }
+
+  p.Pp {
+    margin-left: 4ch;
+  }
+
+  h2.Ss {
+    margin-left: 4ch;
+  }
+
+  h2.Ss+p.Pp {
+    margin-left: 6ch;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  table.head tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .head-ltitle {
+    order: 1;
+  }
+
+  .head-vol {
+    order: 2;
+    text-align: left;
+    white-space: normal;
+  }
+
+  p.Pp {
+    margin-left: 2ch;
+  }
+
+  h2.Ss {
+    margin-left: 2ch;
+  }
+
+  h2.Ss+p.Pp {
+    margin-left: 4ch;
+  }
+}

@@ -1,0 +1,83 @@
+@import url('base.css');
+
+body {
+  font-size: 14px;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.site {
+  max-width: 48ch;
+  width: 100%;
+}
+
+.content {
+  padding: 0 0.5rem;
+}
+
+.user {
+  color: var(--accent);
+  font-size: 16px;
+  margin-bottom: 0.25rem;
+}
+
+.desc {
+  color: var(--muted);
+  margin: 0 0 1.5rem;
+  font-size: 13px;
+}
+
+.tree {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.tree a {
+  color: var(--fg);
+}
+
+.tree a:hover {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.info {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.info dt {
+  display: none;
+}
+
+.info dd {
+  margin: 0;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  body {
+    align-items: flex-start;
+    font-size: 13px;
+    padding: 1.25rem;
+    padding-top: 3rem;
+  }
+
+  .user {
+    font-size: 15px;
+  }
+
+  .info a {
+    overflow-wrap: break-word;
+    word-break: keep-all;
+  }
+}

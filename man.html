@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Manual page</title>
+  <link rel="stylesheet" href="/assets/css/man.css">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/icons/site.webmanifest" />
+</head>
+
+<body>
+  <iframe id="paranoia" class="man-frame" src="paranoia.html" title="Manual page PARANOIA(7)"></iframe>
+  <iframe id="iamanaws" class="man-frame" src="iamanaws.html" title="Manual page IAMANAWS(7)"></iframe>
+
+  <div id="prompt">
+    <div id="prompt-inner">
+      <span class="label label-iamanaws">&nbsp;Manual page IAMANAWS(7)</span>
+      <span class="label label-paranoia">&nbsp;Manual page PARANOIA(7)</span>
+      <span id="progress"></span>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="./index.html">home</a>
+  </nav>
+
+  <div id="help-overlay">
+    <div id="help-box">
+      <h2>KEY BINDINGS</h2>
+      <dl>
+        <dt>h, ?</dt>
+        <dd>show help</dd>
+        <dt>q</dt>
+        <dd>go back</dd>
+        <dt>j, ↓</dt>
+        <dd>scroll down</dd>
+        <dt>k, ↑</dt>
+        <dd>scroll up</dd>
+        <dt>d</dt>
+        <dd>half page down</dd>
+        <dt>u</dt>
+        <dd>half page up</dd>
+        <dt>space</dt>
+        <dd>page down</dd>
+        <dt>b</dt>
+        <dd>page up</dd>
+        <dt>g</dt>
+        <dd>go to top</dd>
+        <dt>G</dt>
+        <dd>go to bottom</dd>
+        <dt>Esc</dt>
+        <dd>close help</dd>
+      </dl>
+    </div>
+  </div>
+
+  <script src="man.js"></script>
+
+  <noscript>
+    <style>
+      .man-frame {
+        height: 100%;
+      }
+
+      #prompt,
+      #help-overlay {
+        display: none;
+      }
+    </style>
+  </noscript>
+</body>
+
+</html>

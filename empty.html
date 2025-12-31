@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="404-ish / quiet space — intentionally empty." />
+  <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/icons/site.webmanifest" />
+  <title>empty</title>
+  <style>
+    * {
+      cursor: url("http://9front.org/img/cursor.png"), auto;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      background: #000;
+      color: #444;
+      font: 14px ui-monospace, monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 12px;
+      line-height: 1;
+      z-index: 10;
+    }
+
+    .nav a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <main id="msg">not here. maybe nowhere.</main>
+
+  <nav class="nav">
+    <a href="./index.html" aria-label="return home">home</a>
+  </nav>
+
+  <script>
+    const msgs = [
+      { text: "this space intentionally left empty" },
+      { text: "not here. maybe nowhere." },
+      { text: "somewhere, a server is waiting" },
+      { text: "message is empty", italic: true },
+      { text: "oops? or feature." },
+      { text: "the front fell off" },
+    ];
+
+    const selection = msgs[Math.floor(Math.random() * msgs.length)];
+    const el = document.getElementById("msg");
+
+    el.textContent = selection.text;
+    el.style.fontStyle = selection.italic ? "italic" : "normal";
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+= iamanaws — personal website
+
+Static site built from plain HTML/CSS (minimal JS)
+
+== Pages
+
+* `index.html` — landing
+* `man.html` — iframe wrapper with vim-like keybindings
+* `empty.html` — intentionally blank space
+* `*.7` — manpages
+
+== Development
+
+Enter the dev shell:
+
+[source,sh]
+----
+nix develop
+----
+
+Inside the shell, serve the built package:
+
+[source,sh]
+----
+serve   # Start local dev server on :8080
+----
+
+== Build
+
+Build the complete site:
+
+[source,sh]
+----
+nix build
+----
+
+The output is in `./result/`
+
+== Flake outputs
+
+[cols="1,2"]
+|===
+| Output | Description
+
+| `packages.default`
+| Built static site
+
+| `devShells.default`
+| Dev environment with python server
+|===
+
+== mdoc reference
+
+https://man.openbsd.org/mdoc.7
+
