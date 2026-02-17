@@ -11,7 +11,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    cursor: url('http://9front.org/img/cursor.png'), auto;
+    cursor: url("/assets/icons/cursor.png"), auto;
 }
 
 html,
